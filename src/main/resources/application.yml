@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    username: admin
+    password: admin
+    url: jdbc:postgresql://localhost:5432/user
+  jpa:
+    show-sql: true
+    spring.jpa.database-platform: org.postgresql.Driver
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8082
+          #jwk-set-uri: http://localhost:8082/oauth2/jwks
